@@ -18,5 +18,11 @@ app.use(cookieParser())
 
 import router from "./routes/user.js";
 app.use("/api/v1/users", router)
+app.get("/", (req, res) => {
+	return res.json({
+		success:true,
+		message:'Your server is up and running....'
+	});
+});
 
 export {app}
